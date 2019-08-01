@@ -2,12 +2,21 @@ import React from 'react'
 
 
 const Card = (props) => {
-  const localTime = props.time
+
+  let cityName = props.timezone
+  cityName = /\/(.+)/.exec(cityName)[1].replace(/_/, ' ')
+
+  const localUnixTime = new Date(props.time*1000)
+  const localTime = localUnixTime.toLocaleTimeString()
+  const temperatureCelcius = ((props.temperature-32)*5/9).toFixed(0)
+  const apparentTemperatureCelcius = ((props.apparentTemperature-32)*5/9).toFixed(0)
+
+
 
   return (
     <div className="card">
       <div className="card-header">
-        <div className="card-header-title">{props.timezone}</div>
+        <div className="card-header-title">{cityName}</div>
       </div>
       <div className="card-content">
         <p>{props.icon}</p>
@@ -19,10 +28,10 @@ const Card = (props) => {
         <p>{props.summary}</p>
       </div>
       <div className="card-content">
-        <p>Temperature: {props.temperature}</p>
+        <p>Temperature: {temperatureCelcius}°C</p>
       </div>
       <div className="card-content">
-        <p>Apparent Temperature: {props.apparentTemperature}</p>
+        <p>Apparent Temperature: {apparentTemperatureCelcius}°C</p>
       </div>
       <div className="card-content">
         <p>Humidity: {props.humidity}</p>
