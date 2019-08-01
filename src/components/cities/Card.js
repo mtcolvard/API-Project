@@ -1,5 +1,5 @@
 import React from 'react'
-
+// const images = ['https://i.imgur.com/TALhwVW.png']
 
 const Card = (props) => {
 
@@ -10,11 +10,21 @@ const Card = (props) => {
   const localTime = localUnixTime.toLocaleTimeString()
   const temperatureCelcius = ((props.temperature-32)*5/9).toFixed(0)
   const apparentTemperatureCelcius = ((props.apparentTemperature-32)*5/9).toFixed(0)
+  // const imgAddress = '~/development/API-Project/src/components/cities/images/'
+  // const partly-cloudy-day = 'https://svgur.com/i/EP3.svg'
+  // <figure className="image" style={{ backgroundImage: `url(${imgAddress}${props.icon}.svg)`}}>
+
+  // let imgscv = 'https://svgur.com/i/EP3.svg'
 
 
+  // imgscv = props.icon
+
+  // const imgsvg = 'https://svgur.com/i/EP3.svg'
+  // <figure className="image" style={{ backgroundImage: `url(${props.icon})`}}>
+  // </figure>
 
   return (
-    <div className="card">
+    <div className="card columns is-one-fifth">
       <div className="card-header">
         <div className="card-header-title">{cityName}</div>
       </div>

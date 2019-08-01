@@ -4,6 +4,7 @@ import {HashRouter, Route, Switch} from 'react-router-dom'
 
 import CitiesIndex from './components/cities/Index'
 import Hero from './components/common/Hero'
+import Header from './components/common/Header'
 import './style.scss'
 // import 'bulma'
 // import axios from 'axios'
@@ -14,11 +15,14 @@ import './style.scss'
 
 class App extends React.Component {
 
+
   render() {
     return(
       <HashRouter>
         <Hero />
+        <Header />
         <Switch>
+
           <Route path="/" component={CitiesIndex} />
         </Switch>
       </HashRouter>

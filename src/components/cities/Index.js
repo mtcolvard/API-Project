@@ -4,6 +4,10 @@ import axios from 'axios'
 
 import Card from './Card'
 
+
+
+
+
 class CitiesIndex extends React.Component {
   constructor() {
     super()
@@ -14,20 +18,20 @@ class CitiesIndex extends React.Component {
 
   }
 
-
   handleSubmit(e){
     e.preventDefault()
-    console.log(e.value)
   }
 
   componentDidMount() {
-    // const array = [37.8267,-122.4233, 40.7127,-74.0059]
+
 
     const citiesToFetch = [
       { name: 'Los Angeles', lat: 37.8267, long: -122.4233 },
       { name: 'New York', lat: 40.7127, long: -74.0059 },
       { name: 'London', lat: 51.507351, long: -0.127758 },
-      { name: 'Dubai', lat: 25.204849, long: 55.270782}
+      { name: 'Dubai', lat: 25.204849, long: 55.270782},
+      { name: 'Bangkok', lat: 13.756331, long: 100.501762}
+      // { name: , lat: , long:}
 
 
     ]
@@ -37,58 +41,17 @@ class CitiesIndex extends React.Component {
         .then(res => this.setState({cities: this.state.cities.concat(res.data)}))
 
     })
-
-    // for (let i = 0; i < array.length; i = i + 2){
-    //   axios.get(`https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/47fe293fb5087a343396299f31f740ec/${array[i]},${array[i+1]}`)
-    //     .then(res => this.setState({cities: this.state.cities.concat(res.data)}))
-
-
-
-
-
-    // axios.get(`https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/47fe293fb5087a343396299f31f740ec/${array[2]},${array[3]}`)
-    //   .then(res => this.setState({city: res.data}))
   }
-  // fetch(`https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/47fe293fb5087a343396299f31f740ec/${array[0]},${array[1]}`)
-  //     .then(res => res.json())
-  //     .then(data => this.setState({city: data}))
-  // }
-
-  // componentDidMount() {
-  //   fetch('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/47fe293fb5087a343396299f31f740ec/37.8267,-122.4233')
-  //     .then(res => res.json())
-  //     .then(data => this.setState({city: data}))
-  // }
-
-
-
 
 
   render() {
+
     if(!this.state.cities) return <h2>just a second</h2>
     return (
       <section className="section">
         <div className="container">
-          <div className="columns is-multiline">
-            <div>
-              <form>
-                <input
-                  className="input"
-                  name="longitude"
-                  placeholder="45.834"
-                  onChange={this.handleSubmit}
-                />
-                <input
-                  className="input"
-                  name="latitude"
-                  placeholder="45.834"
-                  onChange={this.handleSubmit}
+          <div className="header">
 
-                />
-                <button className="button is-primary">Submit</button>
-              </form>
-
-            </div>
             {this.state.cities.map(city =>
               <div key={city.latitude}>
 
