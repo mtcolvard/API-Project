@@ -14,7 +14,7 @@ class Hero extends React.Component {
               Weather Friends
             </h1>
             <h2 className="subtitle">
-              A place to take the weather.
+              A place to take the weather of your friends.
             </h2>
           </div>
         </div>
@@ -23,4 +23,4 @@ class Hero extends React.Component {
   }
 }
 
-export default Hero
+// export default Hero
