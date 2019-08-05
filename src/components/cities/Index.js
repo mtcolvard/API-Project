@@ -81,7 +81,7 @@ class CitiesIndex extends React.Component {
                 <h2 className="subtitle is-left">
                   A place to take the weather of your friends.
                 </h2>
-                </div>
+            </div>
             </div>
           </div>
             <div className="container is-right">
