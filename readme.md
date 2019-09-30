@@ -46,21 +46,25 @@ The biggest challenge was using API and learning how to pull some data from one 
 
 
 ### Pair coding
-That was our first-time pair coding. We used only one computer to write the code, but the research has been done separately. It was a great experience to learn how to cooporate with another person that comes with his coding style and to combined knowledge.
+That was our first-time pair coding. We used only one computer to write the code, but the research has been done separately. It was a great experience to learn how to cooperate with another person that comes with his coding style and to combined knowledge.
 
 ## Wins and blocks
-The biggest win was emargin two APIs together for the first time, pulling the data from one API and with it pull more data from the other API.
-Another great win was manipulating the data we got from the API to be readble by a user - for example, when you ask the API for the specific city, you will get it with the continent for example:
+The biggest win was emerging two APIs together for the first time, pulling the data from one API and with it pull more data from the other API.
+Another great win was manipulating the data we got from the API to be readable by a user - for example, when you ask the API for the specific city, you will get it with the continent:
 
 ![Raw data from the API](https://user-images.githubusercontent.com/51882532/65886706-b56d1280-e394-11e9-8eff-bf9d86a8123f.png)
 
-In the app the name is clean, the icon is not a word but an icon, the tempature written in Celsius and the rest of the data is showed to the user in a readable way.
+In the app, the name is clean, the icon is not a word, but an icon, the temperature written in Celsius and the rest of the data are shown to the user understandably.
 
-![Data showed to the user](https://user-images.githubusercontent.com/51882532/65885757-1562b980-e393-11e9-957e-e9e00b478e86.png)
+![data showed to the user](https://user-images.githubusercontent.com/51882532/65885757-1562b980-e393-11e9-957e-e9e00b478e86.png)
 
-The blockes were mainly in the ability to find some cities. For example, if you will look for Washington, you will get the weather in Washington, DC, but not any other city named Washington. That is something we could address in the future, building a better way to found a city.
+The blocks were mainly in the ability to find some cities. For example, if you look for Washington, you get the weather in Washington, DC, but not any other city named Washington. That is something we could address in the future, building a better way to found a city. For small cities, the API looks for a bigger city around it.
+Edit - over the time it seems that we have a problem with the location API since all names of the cities in the US shown as New York. 
 
+## Learning process
+This project was my first hackathon and the first time I dealt with an API. I learnt to find a workable API, how to manipulate data from the API, so it will be accessible and readable to a user and mostly how to work in a small team of two.
+That was also the first time I used React to build a frontend, a great library that I enjoyed work with and discover a lot of new possibilities to create some features. 
 
-
-
+## Future features
+Choosing one of a few Washingtons, able to look for future weather (which is in the API) and adding a name of your friend to a city. The app was built in 48 hours, so I am sure we could create a lot more features after practising working with React and doing some more research.
 
