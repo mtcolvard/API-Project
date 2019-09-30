@@ -52,9 +52,9 @@ That was our first-time pair coding. We used only one computer to write the code
 The biggest win was emargin two APIs together for the first time, pulling the data from one API and with it pull more data from the other API.
 Another great win was manipulating the data we got from the API to be readble by a user - for example, when you ask the API for the specific city, you will get it with the continent for example:
 
-![Raw data from the API](https://user-images.githubusercontent.com/51882532/65885499-b3a24f80-e392-11e9-86c7-fb4064233903.png)
+![Raw data from the API](https://user-images.githubusercontent.com/51882532/65886706-b56d1280-e394-11e9-8eff-bf9d86a8123f.png)
 
-In the app the name is clean, the icon is not a word but an icon and the rest of the data is showed to the user in a readable way.
+In the app the name is clean, the icon is not a word but an icon, the tempature written in Celsius and the rest of the data is showed to the user in a readable way.
 
 ![Data showed to the user](https://user-images.githubusercontent.com/51882532/65885757-1562b980-e393-11e9-957e-e9e00b478e86.png)
 
