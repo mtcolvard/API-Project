@@ -36,6 +36,7 @@ const Card = (props) => {
   }
 
   const weatherAnimation = {
+<<<<<<< HEAD
     'clear-day': '',
     'clear-night': '',
     'cloudy': 'animated fadeOutUp infinite',
@@ -46,6 +47,18 @@ const Card = (props) => {
     'sleet': 'animated flash infinite',
     'snow': 'animated bounce infinite',
     'wind': 'animated wobble infinite'
+=======
+    'clear-day': 'animated shake infinite',
+    'clear-night': 'animated shake infinite',
+    'cloudy': 'animated shake infinite',
+    'fog': 'animated shake infinite',
+    'partly-cloudy-day': 'animated shake infinite',
+    'partly-cloudy-night': 'animated shake infinite',
+    'rain': 'animated shake infinite',
+    'sleet': 'animated shake infinite',
+    'snow': 'animated shake infinite',
+    'wind': 'animated shake infinite'
+>>>>>>> upstream/master
   }
 
 
