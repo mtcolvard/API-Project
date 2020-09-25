@@ -3,15 +3,15 @@ import ReactDom from 'react-dom'
 import {HashRouter, Route, Switch} from 'react-router-dom'
 
 import CitiesIndex from './components/cities/Index'
-import Hero from './components/common/Hero'
-// import Header from './components/common/Header'
 import './style.scss'
-// import 'bulma'
+import 'animate.css'
+
+
+// import Hero from './components/common/Hero'
+// import Card from './components/Card'
+// import Header from './components/common/Header'
 // import axios from 'axios'
 
-// import { HashRouter, Route } from 'react-router-dom'
-
-// import Card from './components/Card'
 
 class App extends React.Component {
 

@@ -1,7 +1,7 @@
 import React from 'react'
-// import ReactDom from 'react-dom'
 import axios from 'axios'
 import Card from './Card'
+// import ReactDom from 'react-dom'
 
 class CitiesIndex extends React.Component {
   constructor() {
