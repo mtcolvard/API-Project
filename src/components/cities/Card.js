@@ -6,16 +6,11 @@ const Card = (props) => {
   let cityName = props.timezone
   cityName = /\/(.+)/.exec(cityName)[1].replace(/_/, ' ')
   const humidity = props.humidity * 100
-
-
-  // const localUnixTime = new Date(props.time*1000)
-  // const localTime = localUnixTime.toLocaleTimeString()
-
-  // switch ()
   const temperatureCelcius = ((props.temperature-32)*5/9).toFixed(0)
   const apparentTemperatureCelcius = ((props.apparentTemperature-32)*5/9).toFixed(0)
   const chanceOfRain = props.precipProbability * 100
-
+  // const localUnixTime = new Date(props.time*1000)
+  // const localTime = localUnixTime.toLocaleTimeString()
 
   // const imgAddress = './images/'
   // const partly-cloudy-day = 'https://svgur.com/i/EP3.svg'
@@ -34,21 +29,31 @@ const Card = (props) => {
     'snow': 'https://svgur.com/i/ENP.svg',
     'wind': 'https://svgur.com/i/EMz.svg'
   }
-
   const weatherAnimation = {
-    'clear-day': 'animated shake infinite',
-    'clear-night': 'animated shake infinite',
-    'cloudy': 'animated shake infinite',
-    'fog': 'animated shake infinite',
-    'partly-cloudy-day': 'animated shake infinite',
-    'partly-cloudy-night': 'animated shake infinite',
-    'rain': 'animated shake infinite',
-    'sleet': 'animated shake infinite',
-    'snow': 'animated shake infinite',
-    'wind': 'animated shake infinite'
+    'clear-day': '',
+    'clear-night': '',
+    'cloudy': '',
+    'fog': '',
+    'partly-cloudy-day': '',
+    'partly-cloudy-night': '',
+    'rain': '',
+    'sleet': '',
+    'snow': '',
+    'wind': ''
   }
-
-
+  // ALTERNATE SETTINGS FOR INCLUDING ANIMATION
+  // const weatherAnimation = {
+  //   'clear-day': '',
+  //   'clear-night': '',
+  //   'cloudy': 'animated fadeOutUp 1 forwards',
+  //   'fog': 'animated fadeOut 1 forwards',
+  //   'partly-cloudy-day': '',
+  //   'partly-cloudy-night': '',
+  //   'rain': 'animated flash 1 forwards',
+  //   'sleet': 'animated flash 1 forwards',
+  //   'snow': 'animated bounce 1 forwards',
+  //   'wind': 'animated wobble 1 forwards'
+  // }
 
   allWeather[props.icon]
   weatherAnimation[props.icon]
@@ -61,31 +66,33 @@ const Card = (props) => {
   // const imgsvg = 'https://svgur.com/i/EP3.svg'
   // <figure className="image" style={{ backgroundImage: `url(${props.icon})`}}>
   // </figure>
+
   return (
     <div className="card">
       <div className="card-header">
         <div className="card-header-title">{cityName}</div>
       </div>
-      <div className="card-content">
+      <div className="card-content card-summary">
+        <p>{props.summary}</p>
+      </div>
+      <div className="card-content card-icons">
         <figure className={`image ${weatherAnimation[props.icon]}`} style={{ backgroundImage: `url("${allWeather[props.icon]}")`}}/>
       </div>
       <div className="card-content">
-        <p>{props.summary}</p>
+        <p>Feels Like: {apparentTemperatureCelcius}°C</p>
       </div>
+      <div className="card-content">
+        <p>Chance of Rain: {chanceOfRain}%</p>
+      </div>
+      <hr/>
       <div className="card-content">
         <p>Temperature: {temperatureCelcius}°C</p>
-      </div>
-      <div className="card-content">
-        <p>Apparent Temperature: {apparentTemperatureCelcius}°C</p>
       </div>
       <div className="card-content">
         <p>Humidity: {humidity}%</p>
       </div>
       <div className="card-content">
-        <p>Chance of Rain: {chanceOfRain}%</p>
-      </div>
-      <div className="card-content">
-        <p>Wind Speed: {props.windSpeed}</p>
+        <p>Wind Speed: {props.windSpeed} km/h</p>
       </div>
       <div className="card-content">
         <p>UV Index: {props.uvIndex}</p>

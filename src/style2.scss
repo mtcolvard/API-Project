@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic);
+$turquoise: #34495e;
+$family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+
+
+figure.image {
+  width: 100%;
+  height: 50px;
+}
+
+field-container {
+  margin: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+  h1 {
+      display: block;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+  }
+
+  html {
+    background-color: white;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    min-width: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.hero-body {
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 3rem 1.5rem; }
+
+.hero.is-primary {
+    background-color: #34495e;
+    color: #fff;
+}
+
+.hero.is-primary .title {
+    color: #fff;
+}
+
+.title {
+    color: #363636;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.125;
+    font-family: "Lato";
+}
+
+.title, .subtitle {
+    word-break: break-word;
+}
+
+body, button, input, select, textarea {
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+
+
+@import '~bulma'
